@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fitness Tracker</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fitness Tracker</h1>
+      
+      <div class="workout-form">
+        <h2>Add Workout</h2>
+        <form id="workout-form">
+          <select id="workout-type" required>
+            <option value="">Select workout type</option>
+            <option value="running">Running</option>
+            <option value="cycling">Cycling</option>
+            <option value="swimming">Swimming</option>
+          </select>
+          <input type="number" id="duration" placeholder="Duration (minutes)" required>
+          <input type="number" id="distance" placeholder="Distance (km)" required step="0.01">
+          <button type="submit">Add Workout</button>
+        </form>
+      </div>
+
+      <div class="stats">
+        <h2>Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Workouts</h3>
+            <p id="total-workouts">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Total Distance</h3>
+            <p id="total-distance">0 km</p>
+          </div>
+          <div class="stat-card">
+            <h3>Total Duration</h3>
+            <p id="total-duration">0 min</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="workout-list">
+        <h2>Recent Workouts</h2>
+        <div id="workouts"></div>
+      </div>
+    </div>
+  </body>
+</html>
